@@ -19,6 +19,7 @@ using System.IO;
 using System.Windows;
 using System.Text.RegularExpressions;
 
+
 namespace Slogovik
 {
     /// <summary>
