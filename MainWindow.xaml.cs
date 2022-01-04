@@ -52,7 +52,7 @@ namespace Slogovik
         void ChangeStartTextBlock()
         {
             sup.Text = "This mini-program makes words from random syllables pre-loaded from a csv file. First, open csv file then press MAKE WORDS. Used to create some uniqie logins, nicknames, etc. Each syllable must be on a new line";
-            example.Text = "if there are no files with this exe here are two syllable alphabets for rus and eng languages. copy the content with Ctrl+A and save into *.txt file then import into this app";
+            example.Text = "if there are no files with this exe here are two syllable alphabets for rus and eng languages. copy the content with Ctrl+A and save into *.txt file then import into this app. Can use any text input like syllables or letters";
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -95,8 +95,8 @@ namespace Slogovik
             }
 
 
-            
 
+            sylAmount.Text = result.Length.ToString();
        
 
 
