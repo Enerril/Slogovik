@@ -95,8 +95,11 @@ namespace Slogovik
             }
 
 
-
-            sylAmount.Text = result.Length.ToString();
+            if (result != null)
+            {
+                sylAmount.Text = result.Length.ToString();
+            }
+            
        
 
 
