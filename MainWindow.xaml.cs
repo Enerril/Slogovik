@@ -36,7 +36,7 @@ namespace Slogovik
 
         int wN, sN;
 
-        int i, j,tempSN;
+        int i, j,tempSN,tempJ;
 
         string temp;
 
@@ -61,7 +61,7 @@ namespace Slogovik
             words.Clear();
         }
 
-
+//
 
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
         {
@@ -132,11 +132,35 @@ namespace Slogovik
 
             }
             */
+
+            // сделать выбор слогов последовательным. можно выбрать позицию 1, 1-2, 1-2-3. 1-3 нельзя и 2-3 нельзя. Для них нужна отдельная функция скорее всего но это уже нафиг.
+            // 
             for (i = 0; i < wN; i++)
             {
                 tempSN = sN;
 
-                for (j = 0; j < tempSN; j++)
+                tempJ = 0;
+
+                if (Int32.Parse(slog1.Text)!=0 && Int32.Parse(slog1.Text)<=result.Length)
+                {
+                    temp = result[(Int32.Parse(slog1.Text)-1)].slog;
+                    tempJ++;
+                    tempWord.Append(temp);
+                }
+                if (Int32.Parse(slog2.Text) != 0 && Int32.Parse(slog2.Text) <= result.Length)
+                {
+                    temp = result[(Int32.Parse(slog2.Text)-1)].slog;
+                    tempJ++;
+                    tempWord.Append(temp);
+                }
+                if (Int32.Parse(slog3.Text) != 0 && Int32.Parse(slog3.Text) <= result.Length)
+                {
+                    temp = result[(Int32.Parse(slog3.Text)-1)].slog;
+                    tempJ++;
+                    tempWord.Append(temp);
+                }
+
+                for (j = tempJ; j < tempSN; j++)
                 {
 
                     temp = result[rn.Next(0, result.Length)].slog;
