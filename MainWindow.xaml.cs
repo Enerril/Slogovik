@@ -81,20 +81,22 @@ namespace Slogovik
             {
                 var engine = new FileHelperEngine<Slog>(Encoding.UTF8);
                 directoryPath = openFileDialog.FileName;
-                result = engine.ReadFile(directoryPath);
+               
+                var result = engine.ReadFile(directoryPath);
                 /*
                 txtEditor.Text = directoryPath;
                 */
-                
+
                 /*
                 foreach (Slog slog in result)
                 {
                     MessageBox.Show(slog.slog);
 
                 }*/
-                
+                this.result = result;
             }
 
+            
 
             if (result != null)
             {
