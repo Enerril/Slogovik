@@ -149,26 +149,37 @@ namespace Slogovik
 
                 tempWord.Append(pref.Text);
 
+                if (!String.IsNullOrEmpty(slog1.Text))
+                {
+                    if (Int32.Parse(slog1.Text) != 0 && Int32.Parse(slog1.Text) <= result.Length)
+                    {
 
 
-                if (Int32.Parse(slog1.Text)!=0 && Int32.Parse(slog1.Text)<=result.Length)
-                {
-                    temp = result[(Int32.Parse(slog1.Text)-1)].slog;
-                    tempJ++;
-                    tempWord.Append(temp);
+                        temp = result[(Int32.Parse(slog1.Text) - 1)].slog;
+                        tempJ++;
+                        tempWord.Append(temp);
+                    }
                 }
-                if (Int32.Parse(slog2.Text) != 0 && Int32.Parse(slog2.Text) <= result.Length)
+
+                if (!String.IsNullOrEmpty(slog2.Text))
                 {
-                    temp = result[(Int32.Parse(slog2.Text)-1)].slog;
-                    tempJ++;
-                    tempWord.Append(temp);
+                    if (Int32.Parse(slog2.Text) != 0 && Int32.Parse(slog2.Text) <= result.Length)
+                    {
+                        temp = result[(Int32.Parse(slog2.Text) - 1)].slog;
+                        tempJ++;
+                        tempWord.Append(temp);
+                    }
                 }
-                if (Int32.Parse(slog3.Text) != 0 && Int32.Parse(slog3.Text) <= result.Length)
+                if (!String.IsNullOrEmpty(slog3.Text))
                 {
-                    temp = result[(Int32.Parse(slog3.Text)-1)].slog;
-                    tempJ++;
-                    tempWord.Append(temp);
+                    if (Int32.Parse(slog3.Text) != 0 && Int32.Parse(slog3.Text) <= result.Length)
+                    {
+                        temp = result[(Int32.Parse(slog3.Text) - 1)].slog;
+                        tempJ++;
+                        tempWord.Append(temp);
+                    }
                 }
+                   
 
                 for (j = tempJ; j < tempSN; j++)
                 {
