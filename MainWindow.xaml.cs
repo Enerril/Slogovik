@@ -147,6 +147,10 @@ namespace Slogovik
 
                 tempJ = 0;
 
+                tempWord.Append(pref.Text);
+
+
+
                 if (Int32.Parse(slog1.Text)!=0 && Int32.Parse(slog1.Text)<=result.Length)
                 {
                     temp = result[(Int32.Parse(slog1.Text)-1)].slog;
@@ -179,6 +183,7 @@ namespace Slogovik
                 }
                 //tempWord.Append(space);
                 tempWord.Replace(" ", "");
+                tempWord.Append(suff.Text);
                 tempWord.Append(space);
                 words.Append(tempWord);
                 tempWord.Clear();
